@@ -1,0 +1,29 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "Learning React",
+  "main": "App.js",
+  "type": "module",
+  "scripts": {
+    "start": "parcel index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vansh0784/Learning.git"
+  },
+  "author": "Vansh Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vansh0784/Learning/issues"
+  },
+  "homepage": "https://github.com/vansh0784/Learning#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}

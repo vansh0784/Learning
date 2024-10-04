@@ -1,3 +1,16 @@
 Hello Everyone
 
-Myself! Vansh Singh this is my repo to maintain my all coding stuffgit git 
+Myself! Vansh Singh this is my repo to maintain my all coding stuff
+
+
+---Learnings-----
+ -- > I have learnt about CDn and its uses .. basically it is a Content Distributive Network ...
+ npm -- basically a repo which manages different packages which are use for building production ready application
+ parcel and its feature ---
+ package.json-- it is the file which stores all the content of our project and depedencies and manymore
+ caret and tilda -- difference
+ package and package-lock.json
+ jsx
+ babel - a transcompiler
+ exploring jsx and its features over refining
+ crossorigin
