@@ -36,7 +36,7 @@ const Body = () => {
         <button
           onClick={() => {
             const data = filterData(searchText, allRestaurant);
-            data?setFilteredRest(data):setFilteredRest(allRestaurant);
+            setFilteredRest(data)
 
           }}
         >
