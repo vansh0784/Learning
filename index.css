@@ -12,7 +12,8 @@
     align-items:center;
     justify-content: space-between;
     border: 0.5px solid black;
-    margin:10px
+    margin:10px;
+    position: inherit;
 }
 .header>ul{
     display: flex;
@@ -66,7 +67,7 @@
     width: 150px;
     height: 150px;
 }
-button{
+#btn1{
     border:none;
     text-align: center;
     padding: 5px;
@@ -74,4 +75,24 @@ button{
     height: 20px;
     width: 20px;
     margin-bottom: 5px;
+}
+.Shimmer-Contain{
+    margin:10px;
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.same{
+    margin: 10px;
+    padding: 5px;
+    height: 300px;
+    width: 300px;
+    background-color: #f2f0f0;
+}
+#loginbtn{
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 25px;
+    border: none;
+    text-align: center;
 }

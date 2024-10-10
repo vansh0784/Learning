@@ -1,11 +1,13 @@
 import Card from "./RestaurantCardList";
 import { useState, useEffect } from "react";
 import { filterData, CallAPI } from "../Constants";
+import Shimmer from "./Shimmer";
 
 const Body = () => {
   const [searchText, setSearchText] = useState("");
   const [filteredRest, setFilteredRest] = useState([]);
   const [allRestaurant, setAllRestaurant] = useState([]);
+  const [loading, setLoading]=useState(true);
 
   // Fetch data from API and update state
   useEffect(() => {
@@ -15,6 +17,7 @@ const Body = () => {
         const restaurants = resp?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
         setAllRestaurant(restaurants);
         setFilteredRest(restaurants);
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching restaurants:", error);
       }
@@ -33,7 +36,7 @@ const Body = () => {
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
         />
-        <button
+        <button id="btn1"
           onClick={() => {
             const data = filterData(searchText, allRestaurant);
             setFilteredRest(data)
@@ -43,12 +46,14 @@ const Body = () => {
           <i className="fa fa-search" id="btn"></i>
         </button>
       </div>
+      {loading ? <Shimmer/> : (
+              <div className="Card-container">
+              {filteredRest.map((rest) => {
+                return <Card {...rest.info} key={rest.info.id} />;
+              })}
+            </div>
+      )}
 
-      <div className="Card-container">
-        {filteredRest.map((rest) => {
-          return <Card {...rest.info} key={rest.info.id} />;
-        })}
-      </div>
     </>
   );
 };
