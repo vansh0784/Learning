@@ -14,6 +14,13 @@ https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.66500&lng=77.44770&is-seo
         const data=await response.json();
         return data;
   }
+
+export const CallRestaurant=async(a)=>{
+    const call=await fetch("https://www.swiggy.com/mapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.66500&lng=77.44770&restaurantId="+{a});
+    if(!call.ok) throw new Error("Restaurant API Call failed");
+    const data=await call.json();
+    return data;
+}
 // }
 // export const restaurantList= [
 //     {

@@ -54,7 +54,7 @@
     flex-wrap:wrap;
     border: 0.7px solid black;
 }
-.cards{
+#cards{
     padding: 5px;
     width: calc(20% - 10px);
     height:300px;

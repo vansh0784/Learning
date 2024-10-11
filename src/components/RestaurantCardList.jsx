@@ -6,7 +6,7 @@ const Card=({cloudinaryImageId,name,cuisines,avgRating})=>{
             <img src={img_Url+cloudinaryImageId} alt="Item1_image"></img>
             <h2>{name}</h2>
             <h3>{cuisines.join(" , ")}</h3>
-            <h3>{avgRating} Stars</h3>
+            <h3>{avgRating}⭐ </h3>
         </div>
     )
 }

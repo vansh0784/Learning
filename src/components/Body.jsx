@@ -1,6 +1,7 @@
 import Card from "./RestaurantCardList";
 import { useState, useEffect } from "react";
 import { filterData, CallAPI } from "../Constants";
+import { Link } from "react-router-dom";
 import Shimmer from "./Shimmer";
 
 const Body = () => {
@@ -15,6 +16,7 @@ const Body = () => {
       try {
         const resp = await CallAPI();
         const restaurants = resp?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+        console.log(restaurants);
         setAllRestaurant(restaurants);
         setFilteredRest(restaurants);
         setLoading(false);
@@ -49,7 +51,7 @@ const Body = () => {
       {loading ? <Shimmer/> : (
               <div className="Card-container">
               {filteredRest.map((rest) => {
-                return <Card {...rest.info} key={rest.info.id} />;
+                return <Link id="cards" to={"/restaurant/"+rest.info.id}key={rest.info.id}><Card {...rest.info}/></Link>;
               })}
             </div>
       )}
