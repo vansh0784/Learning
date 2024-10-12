@@ -16,7 +16,6 @@ const Body = () => {
       try {
         const resp = await CallAPI();
         const restaurants = resp?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-        console.log(restaurants);
         setAllRestaurant(restaurants);
         setFilteredRest(restaurants);
         setLoading(false);
@@ -51,7 +50,7 @@ const Body = () => {
       {loading ? <Shimmer/> : (
               <div className="Card-container">
               {filteredRest.map((rest) => {
-                return <Link id="cards" to={"/restaurant/"+rest.info.id}key={rest.info.id}><Card {...rest.info}/></Link>;
+                return <Link id="cards" to={`/id/${rest.info.id}`}key={rest.info.id}><Card {...rest.info}/></Link>;
               })}
             </div>
       )}

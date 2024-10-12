@@ -15,12 +15,28 @@ https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.66500&lng=77.44770&is-seo
         return data;
   }
 
-export const CallRestaurant=async(a)=>{
-    const call=await fetch("https://www.swiggy.com/mapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.66500&lng=77.44770&restaurantId="+{a});
-    if(!call.ok) throw new Error("Restaurant API Call failed");
-    const data=await call.json();
-    return data;
-}
+  export const CallRestaurant = async (restId) => {
+    try {
+      const response = await fetch(
+        `https://www.swiggy.com/mapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.66500&lng=77.44770&restaurantId=${restId}`
+      );
+
+      if (!response.ok) {
+        throw new Error(`Restaurant API call failed with status ${response.status}`);
+      }
+
+      const data = await response.json();
+      if (!data?.data) {
+        throw new Error("Invalid restaurant data received from API");
+      }
+
+      return data;
+    } catch (error) {
+      console.error("Error fetching restaurant data:", error);
+      throw error; // Re-throw the error after logging it
+    }
+  };
+
 // }
 // export const restaurantList= [
 //     {

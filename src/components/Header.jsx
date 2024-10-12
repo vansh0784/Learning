@@ -13,7 +13,7 @@ const Header = () => {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About Us</Link></li>
             <li><Link to="/contact">Contact Us</Link></li>
-            <li>Cart</li>
+            <li><i class="ri-shopping-cart-fill">Cart</i></li>
         </ul>
         <button id="loginbtn" onClick={()=>{login==false?setLogin(true):setLogin(false)}}>
             {
