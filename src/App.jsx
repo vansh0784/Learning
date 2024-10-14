@@ -7,6 +7,7 @@ import About from "./components/About";
 import Error from "./components/Error";
 import Contact from "./components/Contact";
 import LinkRestaurant from "./components/LinkRestaurant";
+import Profile from "./components/Profile";
 import { createBrowserRouter,RouterProvider,Outlet } from "react-router-dom";
 
 const root=ReactDom.createRoot(document.querySelector("#root"));
@@ -41,6 +42,10 @@ const Routes=createBrowserRouter([
             {
                 path:"/id/:id",
                 element:<LinkRestaurant/>
+            },
+            {
+                path:"/profile",
+                element:<Profile/>
             }
         ]
     }

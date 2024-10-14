@@ -13,14 +13,20 @@ const Header = () => {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About Us</Link></li>
             <li><Link to="/contact">Contact Us</Link></li>
+            <li><Link to="/profile">Profile</Link></li>
             <li><i class="ri-shopping-cart-fill">Cart</i></li>
         </ul>
+        <div id="addlogin">
         <button id="loginbtn" onClick={()=>{login==false?setLogin(true):setLogin(false)}}>
             {
             login==false?(<i className="ri-admin-line"></i>):
             (<i className="ri-user-follow-fill"></i>)
             }
+            {
+              login==false?(<span className="setlogin">Login</span>):(<span className="setlogin">Logout</span>)
+            }
         </button>
+        </div>
       </div>
     </>
   );
