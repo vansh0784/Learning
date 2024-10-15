@@ -1,4 +1,4 @@
-import notFound from "../assets/page-found-concept-illustration/3796506.jpg"
+import notFound from "../assets/notfound/Not-found.jpg"
 const Offline=()=>{
     return(
         <>

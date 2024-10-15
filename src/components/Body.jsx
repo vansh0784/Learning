@@ -29,10 +29,7 @@ const Body = () => {
     fetchRestaurants();
   }, []);
   const isOnline=useOnline();
-  console.log(isOnline);
-  if(!isOnline){
-    return <Offline/>;
-  }
+  if(!isOnline) return <Offline/>
   return (
     <>
       <div className="Search-Box">

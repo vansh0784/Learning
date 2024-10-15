@@ -13,7 +13,7 @@
     display: flex;
     align-items:center;
     justify-content: space-between;
-    border: 0.5px solid black;
+    border-bottom: 2px solid rgb(235, 229, 229);
     margin:10px;
     position: inherit;
 }
@@ -31,6 +31,7 @@
     outline: none;
     width: 25%;
     margin-right: 10px;
+    border: 0.1px solid rgb(220, 220, 220) ;
 }
 #btn{
     color:blue;
@@ -55,14 +56,14 @@
     justify-content: space-around;
     /* align-items: center; */
     flex-wrap:wrap;
-    border: 0.7px solid black;
+    /* border: 0.7px solid black; */
 }
 #cards{
     padding: 5px;
     width: calc(20% - 10px);
     height:300px;
     margin: 10px;
-    border: 0.5px solid black ;
+    border: 0.2px solid rgb(220, 220, 220) ;
     text-align: center;
     overflow-y: auto;
 }
@@ -255,6 +256,53 @@ h2{
 .offline>ul{
     list-style: none;
 }
-.offline>li,h1,img{
+.offline>h1,img,li{
     padding: 20px;
+}
+.containerfoot{
+    padding: 14px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+#footer-logo{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+.containerfoot>h4{
+    font-size: 13px;
+}
+.branding{
+    color: rgb(136, 59, 100);
+}
+.footer-links{
+    display: flex;
+    flex-direction: column;
+}
+#Foot-link{
+    line-height: 1.2px;
+    /* padding: 2px; */
+    list-style: none;
+    /* background-color: #f54e77; */
+    text-align: center;
+}
+.main-foot{
+    border-top: 5px solid rgb(155, 155, 155) ;
+    margin: 4px 20%;
+    background-color: rgb(240, 240, 245);
+    text-align: center;
+}
+.copyright{
+    padding-top: 10px;
+    color:  rgb(136, 59, 100);
+    font-weight: 700;
+}
+.contact-foot>p>strong{
+    color: rgb(136, 59, 100);
+}
+.contact-foot>p{
+    color: rgba(2, 6, 12, 0.6);
 }
