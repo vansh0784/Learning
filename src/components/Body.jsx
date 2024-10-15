@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { filterData, CallAPI } from "../Constants";
 import { Link } from "react-router-dom";
 import Shimmer from "./Shimmer";
+import Offline from "./Offline";
+import useOnline from "../utility/useOnline";
 
 const Body = () => {
   const [searchText, setSearchText] = useState("");
@@ -26,6 +28,11 @@ const Body = () => {
 
     fetchRestaurants();
   }, []);
+  const isOnline=useOnline();
+  console.log(isOnline);
+  if(!isOnline){
+    return <Offline/>;
+  }
   return (
     <>
       <div className="Search-Box">

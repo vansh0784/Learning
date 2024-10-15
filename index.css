@@ -242,3 +242,19 @@ h2{
 .profile-contain>ul{
     list-style: none;
 }
+.offline{
+    text-align: center;
+    margin:20px 20px;
+    padding:20px
+}
+#not-found-img{
+    border-radius: 5px;
+    height: 250px;
+    width: 250px;
+}
+.offline>ul{
+    list-style: none;
+}
+.offline>li,h1,img{
+    padding: 20px;
+}
