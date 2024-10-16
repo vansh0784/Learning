@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDom from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -9,8 +9,10 @@ import Contact from "./components/Contact";
 import LinkRestaurant from "./components/LinkRestaurant";
 import Profile from "./components/Profile";
 import { createBrowserRouter,RouterProvider,Outlet } from "react-router-dom";
+import Menu from "./components/Menu";
 
 const root=ReactDom.createRoot(document.querySelector("#root"));
+const menu=lazy(import("./components/Menu"));
 
 const App=()=>{
     return(
@@ -46,6 +48,10 @@ const Routes=createBrowserRouter([
             {
                 path:"/profile",
                 element:<Profile/>
+            },
+            {
+                path:"/menu",
+                element:<Suspense><Menu/></Suspense>
             }
         ]
     }

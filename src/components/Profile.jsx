@@ -10,7 +10,14 @@ class Profile extends React.Component{
             profile:"Frontend Developer",
             skills:["JavaScript","HTML & CSS","React Js"],
         }
+        this.setState={
+            name:"XYZ",
+        }
     }
+    componentDidMount(){
+        //
+    }
+    componentDidUpdate
     render(){
         return(
             <>
@@ -31,4 +38,5 @@ class Profile extends React.Component{
     };
 
 };
+// 1--> constructor --> render ---> componentDidMount
 export default Profile;

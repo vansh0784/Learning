@@ -13,7 +13,7 @@
     display: flex;
     align-items:center;
     justify-content: space-between;
-    border-bottom: 2px solid rgb(235, 229, 229);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin:10px;
     position: inherit;
 }
@@ -45,6 +45,7 @@
     text-align: center; */
 }
 .Search-Box{
+    margin-top: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,7 +64,7 @@
     width: calc(20% - 10px);
     height:300px;
     margin: 10px;
-    border: 0.2px solid rgb(220, 220, 220) ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
     overflow-y: auto;
 }
@@ -256,7 +257,7 @@ h2{
 .offline>ul{
     list-style: none;
 }
-.offline>h1,img,li{
+.offline>h1,img{
     padding: 20px;
 }
 .containerfoot{
@@ -283,7 +284,7 @@ h2{
     flex-direction: column;
 }
 #Foot-link{
-    line-height: 1.2px;
+    /* line-height: 1.2px; */
     /* padding: 2px; */
     list-style: none;
     /* background-color: #f54e77; */
