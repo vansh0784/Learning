@@ -10,26 +10,29 @@ const Body = () => {
   const [searchText, setSearchText] = useState("");
   const [filteredRest, setFilteredRest] = useState([]);
   const [allRestaurant, setAllRestaurant] = useState([]);
-  const [loading, setLoading]=useState(true);
+  const [loading, setLoading] = useState(true);
 
   // Fetch data from API and update state
   useEffect(() => {
     const fetchRestaurants = async () => {
       try {
         const resp = await CallAPI();
-        const restaurants = resp?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-        setAllRestaurant(restaurants);
-        setFilteredRest(restaurants);
-        setLoading(false);
+        const restaurants =
+          resp?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+            ?.restaurants;
+        setAllRestaurant(restaurants || []);  // Ensures it's never undefined
+        setFilteredRest(restaurants || []);
       } catch (error) {
         console.error("Error fetching restaurants:", error);
+      } finally {
+        setLoading(false);  // Always stop loading, even on error
       }
     };
 
     fetchRestaurants();
   }, []);
-  const isOnline=useOnline();
-  if(!isOnline) return <Offline/>
+  const isOnline = useOnline();
+  if (!isOnline) return <Offline />;
   return (
     <>
       <div className="Search-Box">
@@ -41,24 +44,33 @@ const Body = () => {
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
         />
-        <button id="btn1"
+        <button
+          id="btn1"
           onClick={() => {
             const data = filterData(searchText, allRestaurant);
-            setFilteredRest(data)
-
+            setFilteredRest(data);
           }}
         >
           <i className="fa fa-search" id="btn"></i>
         </button>
       </div>
-      {loading ? <Shimmer/> : (
-              <div className="Card-container">
-              {filteredRest.map((rest) => {
-                return <Link id="cards" to={`/id/${rest.info.id}`}key={rest.info.id}><Card {...rest.info}/></Link>;
-              })}
-            </div>
+      {loading ? (
+        <Shimmer />
+      ) : (
+        <div className="Card-container">
+          {filteredRest?.length > 0 ? (
+            filteredRest.map((rest) => {
+              return (
+                <Link id="cards" to={`/id/${rest.info.id}`} key={rest.info.id}>
+                  <Card {...rest.info} />
+                </Link>
+              );
+            })
+          ) : (
+            <Shimmer />
+          )}
+        </div>
       )}
-
     </>
   );
 };

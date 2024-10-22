@@ -30,24 +30,24 @@ function About() {
         <h2>Why Choose Us?</h2>
         <ul>
           <li>
-            <bold>Wide Variety of Restaurants:</bold> We partner with a
+            <strong>Wide Variety of Restaurants:</strong> We partner with a
             diverse range of restaurants to offer you endless choices.
           </li>
           <li>
-            <bold>Fast and Reliable Delivery:</bold> Get your food quickly,
+            <strong>Fast and Reliable Delivery:</strong> Get your food quickly,
             with real-time tracking to ensure you’re always in the loop.
           </li>
           <li>
-            <bold>Personalized Experience:</bold> Save your favorite
+            <strong>Personalized Experience:</strong> Save your favorite
             restaurants and dishes for quicker reordering and tailored
             recommendations.
           </li>
           <li>
-            <bold>Seamless Payment:</bold> We offer secure, hassle-free
+            <strong>Seamless Payment:</strong> We offer secure, hassle-free
             payment options for a smooth ordering process.
           </li>
           <li>
-            <bold>Exclusive Deals:</bold> Enjoy special offers, discounts,
+            <strong>Exclusive Deals:</strong> Enjoy special offers, discounts,
             and promotions available only through our app.
           </li>
         </ul>

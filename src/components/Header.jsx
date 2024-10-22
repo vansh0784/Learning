@@ -14,7 +14,7 @@ const Header = () => {
             <li><Link to="/about">About Us</Link></li>
             <li><Link to="/contact">Contact Us</Link></li>
             <li><Link to="/profile">Profile</Link></li>
-            <li><i class="ri-shopping-cart-fill">Cart</i></li>
+            <li><i className="ri-shopping-cart-fill">Cart</i></li>
             <li><Link to="/menu">Menu</Link></li>
         </ul>
         <div id="addlogin">
