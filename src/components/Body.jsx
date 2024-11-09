@@ -20,12 +20,12 @@ const Body = () => {
         const restaurants =
           resp?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
             ?.restaurants;
-        setAllRestaurant(restaurants || []);  // Ensures it's never undefined
+        setAllRestaurant(restaurants || []); // Ensures it's never undefined
         setFilteredRest(restaurants || []);
       } catch (error) {
         console.error("Error fetching restaurants:", error);
       } finally {
-        setLoading(false);  // Always stop loading, even on error
+        setLoading(false); // Always stop loading, even on error
       }
     };
 
@@ -51,7 +51,9 @@ const Body = () => {
             setFilteredRest(data);
           }}
         >
-          <i className="fa fa-search" id="btn"></i>
+          <span id="btn" className="material-symbols-outlined">
+            search
+          </span>
         </button>
       </div>
       {loading ? (
