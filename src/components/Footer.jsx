@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import appLogo2 from "../assets/logoNew.webp"
 const Footer = () => {
   return (
     <>
@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="branding">
             <img
               id="footer-logo"
-              src="https://img.freepik.com/free-vector/hand-drawn-spicy-logo-design_23-2149667267.jpg?t=st=1728015384~exp=1728018984~hmac=9c3964fac5681f838b7a37cffb2879952a37250a8e3eb9bf2ec4876f9c755e96&w=740"
+              src={appLogo2}
               alt="Logo"
             />
             <h4>Food Villa</h4>
@@ -47,4 +47,3 @@ const Footer = () => {
   );
 };
 export default Footer;
-

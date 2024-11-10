@@ -36,7 +36,7 @@ const LinkRestaurant = () => {
           <ul id="cuisines">
             {restaurant.cuisines.map((element, index) => (
               <li key={index}>{element}</li>
-            )).join(',')}
+            ))}
           </ul>
         </div>
         </h2>

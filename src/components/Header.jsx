@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import LoginModal from "./login";
+import appLogo from "../assets/logoNew.webp"
+import LoginPage from "./LoginPage";
 
 const Header = () => {
   const [login, setLogin] = useState(false);
@@ -13,7 +14,7 @@ const Header = () => {
     <>
       <div className="header">
         <img
-          src="https://img.freepik.com/free-vector/hand-drawn-spicy-logo-design_23-2149667267.jpg?t=st=1728015384~exp=1728018984~hmac=9c3964fac5681f838b7a37cffb2879952a37250a8e3eb9bf2ec4876f9c755e96&w=740"
+          src={appLogo}
           alt="Logo"
         />
 
@@ -39,20 +40,11 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <div id="addlogin">
-          {login ? (
-            <Link to="/logout" onClick={() => setLogin(false)}>Logout</Link>
-          ) : (
-            <button onClick={openModal}>Login</button>
-          )}
+        <div id="addLogin">
+          <button id="loginlogo"><i class="ri-account-box-line"></i></button>
         </div>
-        {isModalOpen && <div className="modal-backdrop" onClick={closeModal}></div>}
-        {isModalOpen && (
-          <div className="modal">
-            <LoginModal closeModal={closeModal} />
-          </div>
-        )}
-      </div>
+        </div>
+
     </>
   );
 };
