@@ -1,4 +1,4 @@
-const LoginPage = () => {
+const LoginPage = ({closeModal}) => {
   return (
     <>
       <div className="modal">
@@ -24,6 +24,7 @@ const LoginPage = () => {
                 Don't have an account?<a href="">Signup</a>
               </h4>
             </form>
+            <button id="closebtn" onClick={closeModal}>X</button>
           </div>
         </div>
       </div>

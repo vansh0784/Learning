@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { filterData, CallAPI } from "../Constants";
 import { Link } from "react-router-dom";
 import Shimmer from "./Shimmer";
+import { FcSearch } from "react-icons/fc";
 import Offline from "./Offline";
 import useOnline from "../utility/useOnline";
 
@@ -51,8 +52,8 @@ const Body = () => {
             setFilteredRest(data);
           }}
         >
-          <span id="btn" className="material-symbols-outlined">
-            search
+          <span id="btn" className="searchicon">
+            <FcSearch/>
           </span>
         </button>
       </div>

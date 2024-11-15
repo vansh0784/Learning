@@ -9,6 +9,7 @@ export function filterData(searchText,restaurantList){
 export const CallAPI=async()=>{
 
         const response=await fetch(`
+          https://thingproxy.freeboard.io/fetch/
 https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.66500&lng=77.44770&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING`);
         if(!response.ok) throw new Error("API call failed");
         const data=await response.json();
@@ -18,7 +19,7 @@ https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.66500&lng=77.44770&is-seo
   export const CallRestaurant = async (restId) => {
     try {
       const response = await fetch(
-        `https://www.swiggy.com/mapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.66500&lng=77.44770&restaurantId=${restId}`
+        `https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/mapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.66500&lng=77.44770&restaurantId=${restId}`
       );
 
       if (!response.ok) {

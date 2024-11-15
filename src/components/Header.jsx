@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import appLogo from "../assets/logoNew.webp"
+import appLogo from "../assets/logoNew.webp";
 import LoginPage from "./LoginPage";
 
 const Header = () => {
@@ -13,10 +13,7 @@ const Header = () => {
   return (
     <>
       <div className="header">
-        <img
-          src={appLogo}
-          alt="Logo"
-        />
+        <img src={appLogo} alt="Logo" />
 
         <div id="navitems">
           <ul>
@@ -41,10 +38,31 @@ const Header = () => {
           </ul>
         </div>
         <div id="addLogin">
-          <button id="loginlogo"><i class="ri-account-box-line"></i></button>
+          <button id="loginlogo" onClick={openModal}>
+            {login == 0 ? (
+              <>
+                <i id="profileicon"className="ri-account-box-line"></i><p>SignIn</p>
+              </>
+            ) : (
+              <>
+                <p>Logout</p>
+                {setLogin(true)}
+              </>
+            )}
+          </button>
         </div>
+        <div>
+        {isModalOpen && (
+        <>
+          <div className="modal-backdrop" onClick={closeModal}></div>
+          <div className="modal">
+            <LoginPage />
+            <button onClick={closeModal}>Close</button>
+          </div>
+        </>
+      )}
         </div>
-
+      </div>
     </>
   );
 };

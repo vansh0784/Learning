@@ -557,10 +557,27 @@ h2{
  #loginlogo{
     background: #fff;
     outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
  }
  #addLogin{
     margin-right: 10px;
  }
  ri-account-box-line{
     font-size: larger
+ }
+ .searchicon{
+    padding: 0 2px 2px 0;
+ }
+ #profileicon{
+    height: 10px;
+    width: 10px;
+ }
+ #closebtn{
+    color: red;
+    font-weight: 500;
+    font-size: 12px;
  }

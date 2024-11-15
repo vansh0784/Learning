@@ -9,7 +9,7 @@ import LinkRestaurant from "./components/LinkRestaurant";
 import Profile from "./components/Profile";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Menu from "./components/Menu";
-import Login from "./components/login";
+import login from "./components/LoginPage";
 
 // Lazy loading the Body component
 const Body = lazy(() => import("./components/Body"));
@@ -62,7 +62,7 @@ const Routes = createBrowserRouter([
       },
       {
         path: "/login",
-        element: <Login />,
+        element: <login />,
       },
     ],
   },
