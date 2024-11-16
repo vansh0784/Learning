@@ -3,6 +3,7 @@ import appLogo2 from "../assets/logoNew.webp"
 const Footer = () => {
   return (
     <>
+      <hr className="hrline" />
       <div className="main-foot">
         <div className="containerfoot">
           <div className="branding">

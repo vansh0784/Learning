@@ -1,7 +1,10 @@
+
 const LoginPage = ({closeModal}) => {
   return (
     <>
       <div className="modal">
+        <button className="close-btn" onClick={closeModal}>
+          &times;</button>
         <div >
           <h1 id="signinHead">Sign in to Dil Se Dine </h1>
           <div id="loginform">
@@ -24,7 +27,6 @@ const LoginPage = ({closeModal}) => {
                 Don't have an account?<a href="">Signup</a>
               </h4>
             </form>
-            <button id="closebtn" onClick={closeModal}>X</button>
           </div>
         </div>
       </div>

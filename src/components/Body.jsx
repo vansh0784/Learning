@@ -35,7 +35,7 @@ const Body = () => {
   const isOnline = useOnline();
   if (!isOnline) return <Offline />;
   return (
-    <>
+    <><div className="body">
       <div className="Search-Box">
         <input
           spellCheck="false"
@@ -74,6 +74,7 @@ const Body = () => {
           )}
         </div>
       )}
+      </div>
     </>
   );
 };

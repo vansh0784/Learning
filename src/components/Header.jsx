@@ -35,9 +35,7 @@ const Header = () => {
             <li>
               <Link to="/menu">Menu</Link>
             </li>
-          </ul>
-        </div>
-        <div id="addLogin">
+            <div id="addLogin">
           <button id="loginlogo" onClick={openModal}>
             {login == 0 ? (
               <>
@@ -55,13 +53,15 @@ const Header = () => {
         {isModalOpen && (
         <>
           <div className="modal-backdrop" onClick={closeModal}></div>
-          <div className="modal">
+          <div>
             <LoginPage />
-            <button onClick={closeModal}>Close</button>
           </div>
         </>
       )}
         </div>
+          </ul>
+        </div>
+
       </div>
     </>
   );
