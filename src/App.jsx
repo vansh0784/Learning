@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { useState, useEffect, lazy, Suspense } from "react";
 import ReactDom from "react-dom/client";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -9,14 +9,26 @@ import LinkRestaurant from "./components/LinkRestaurant";
 import Profile from "./components/Profile";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Menu from "./components/Menu";
-import login from "./components/LoginPage";
+import Loader from "./components/Loader";
 
-// Lazy loading the Body component
+
 const Body = lazy(() => import("./components/Body"));
 
 const root = ReactDom.createRoot(document.querySelector("#root"));
 
 const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
+
   return (
     <>
       <Header />
@@ -39,7 +51,7 @@ const Routes = createBrowserRouter([
       {
         path: "/",
         element: (
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<Loader />}>
             <Body />
           </Suspense>
         ),

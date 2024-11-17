@@ -35,7 +35,8 @@ const Body = () => {
   const isOnline = useOnline();
   if (!isOnline) return <Offline />;
   return (
-    <><div className="body">
+    <>
+    <div className="body">
       <div className="Search-Box">
         <input
           spellCheck="false"
@@ -57,8 +58,9 @@ const Body = () => {
           </span>
         </button>
       </div>
+      <div></div>
       {loading ? (
-        <Shimmer />
+        <Shimmer/>
       ) : (
         <div className="Card-container">
           {filteredRest?.length > 0 ? (
@@ -70,7 +72,7 @@ const Body = () => {
               );
             })
           ) : (
-            <Shimmer />
+            <Shimmer/>
           )}
         </div>
       )}

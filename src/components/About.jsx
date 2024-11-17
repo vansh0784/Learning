@@ -6,7 +6,7 @@ function About() {
       <h1 id="about">About Us</h1>
       <div id="about-contain">
         <p>
-          Welcome to <strong>FoodVilla</strong>, your ultimate destination for
+          Welcome to <strong>Dil Se Dine</strong>, your ultimate destination for
           delicious meals delivered directly to your doorstep. We’ve built a
           platform that brings the best of local and global cuisines right to
           your fingertips. Whether you're craving comfort food from your
@@ -21,7 +21,7 @@ function About() {
           you.
         </p>
         <p>
-          At <strong>FoodVilla</strong>, we believe in convenience without
+          At <strong>Dil Se Dine</strong>, we believe in convenience without
           compromise. Our easy-to-use interface allows you to explore a variety
           of dishes, select dietary preferences, and enjoy meals crafted with
           quality ingredients. Whether it's breakfast, lunch, dinner, or even a
@@ -55,7 +55,7 @@ function About() {
           Our mission is to create a better food delivery experience that
           connects food lovers with their favorite restaurants effortlessly.
           Whether you're eating solo, with family, or hosting a party,{" "}
-          <strong>FoodVilla</strong> is here to make every meal memorable.
+          <strong>Dil Se Dine</strong> is here to make every meal memorable.
         </p>
         <p>
           <strong>

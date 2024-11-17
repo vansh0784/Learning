@@ -6,7 +6,7 @@ const Contact=()=>{
                 <div id="Contact">
                     <div className="box">
                         <h2>Contact Details</h2>
-                        <p><strong>Email:</strong> support@foodvilla.com</p>
+                        <p><strong>Email:</strong> support@dilsedine.com</p>
                         <p><strong>Phone:</strong> +1 (123) 456-7890</p>
                         <p><strong>Address:</strong> 123 Food Street, Food City, FC 12345</p>
                     </div>

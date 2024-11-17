@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import appLogo from "../assets/logoNew.webp";
+import appLogo from "../assets/logoNew1.png";
 import LoginPage from "./LoginPage";
 
 const Header = () => {
@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <>
       <div className="header">
-        <img src={appLogo} alt="Logo" />
+        <img id="logonew" src={appLogo} alt="Logo" />
 
         <div id="navitems">
           <ul>

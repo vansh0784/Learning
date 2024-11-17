@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import appLogo2 from "../assets/logoNew.webp"
+import appLogo2 from "../assets/logoNew1.png"
 const Footer = () => {
   return (
     <>
@@ -12,7 +12,7 @@ const Footer = () => {
               src={appLogo2}
               alt="Logo"
             />
-            <h4>Food Villa</h4>
+            <h4>Dil Se Dine</h4>
             <p>Delicious food delivered fast.</p>
           </div>
           <div className="footer-links">
@@ -33,7 +33,7 @@ const Footer = () => {
           </div>
           <div className="contact-foot">
             <p>
-              <strong>Contact</strong>: support@foodvilla.com
+              <strong>Contact</strong>: support@dilsedine.com
             </p>
             <p>
               <strong>Phone</strong>: +1 234-567-890
@@ -41,7 +41,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="copyright">
-          <p>© 2024 Food Villa. All rights reserved.</p>
+          <p>© 2024 Dil Se Dine. All rights reserved.</p>
         </div>
       </div>
     </>
